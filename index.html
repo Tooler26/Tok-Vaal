@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vaal Talk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h1>🔥 Vaal Talk</h1>
+  <ul>
+    <li onclick="showTab('home')">Home</li>
+    <li onclick="showTab('marketplace')">Marketplace</li>
+    <li onclick="showTab('kasiMall')">Kasi Mall</li>
+    <li onclick="showTab('communities')">Communities</li>
+    <li onclick="showTab('jobs')">Jobs</li>
+    <li onclick="showTab('quickJobs')">Quick Jobs</li>
+    <li onclick="showTab('auth')">Account</li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="tab active">
+  <div class="upload-box">
+    <input type="file" id="videoUpload" accept="video/*">
+    <button onclick="uploadVideo()">Upload Video</button>
+  </div>
+  <div class="feed" id="feed"></div>
+</section>
+
+<!-- MARKETPLACE -->
+<section id="marketplace" class="tab">
+  <h2>Marketplace</h2>
+
+  <p class="disclaimer">
+    ⚠️ To prevent scams: Seller sends product to Vaal Talk, buyer sends money to Vaal Talk.
+    We verify and deliver both safely.
+  </p>
+
+  <p>Marketplace coming soon...</p>
+</section>
+
+<!-- KASI MALL -->
+<section id="kasiMall" class="tab">
+  <h2>Kasi Mall</h2>
+
+  <input type="text" id="productName" placeholder="Product Name">
+  <input type="text" id="productPrice" placeholder="Price">
+  <input type="file" id="productImage">
+  <button onclick="addProduct()">Add Product</button>
+
+  <div id="storeProducts"></div>
+</section>
+
+<!-- COMMUNITIES -->
+<section id="communities" class="tab">
+  <h2>Communities Vaal</h2>
+
+  <div id="communitiesList"></div>
+</section>
+
+<!-- JOBS -->
+<section id="jobs" class="tab">
+  <h2>Jobs (Companies Hiring)</h2>
+
+  <input type="text" id="jobTitle" placeholder="Job Title">
+  <input type="text" id="companyName" placeholder="Company">
+  <button onclick="addJob()">Post Job</button>
+
+  <div id="jobsList"></div>
+</section>
+
+<!-- QUICK JOBS -->
+<section id="quickJobs" class="tab">
+  <h2>Quick Jobs (Community Gigs)</h2>
+
+  <input type="text" id="quickJobText" placeholder="Job description">
+  <button onclick="addQuickJob()">Post Quick Job</button>
+
+  <div id="quickJobsList"></div>
+</section>
+
+<!-- AUTH -->
+<section id="auth" class="tab">
+  <h2>Login / Signup</h2>
+
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="signup()">Sign Up</button>
+  <button onclick="login()">Login</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
